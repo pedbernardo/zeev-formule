@@ -1,2 +1,10 @@
 # 🦕 Formule
-Hello...
+
+<br>
+
+##### Experimente
+
+```js
+Formule.rebuild()
+Formule.rewire()
+```
