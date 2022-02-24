@@ -1,7 +1,7 @@
 {
   "name": "zeev-formule",
   "version": "0.0.1",
-  "description": "",
+  "description": "Zeev forms constructor",
   "main": "dist/formule.esm.js",
   "module": "dist/formule.esm.js",
   "browser": "dist/formule.js",
