@@ -21,31 +21,16 @@ import {
 } from './dom/utils'
 
 /**
- * Store DOM references
- */
-const $refs = {
-  container: null,
-  tableButtons: null,
-  tablesContainer: null,
-  tablesMulti: null
-}
-
-/**
  * Rebuild Orquestra form container DOM elements to use grid instead tables
  * @param {HTMLElement} reference DOM starting point
  * @returns {Object} tables transformed
  */
 export function rebuild (reference = document) {
-  const { container, tableButtons } = getFormElements(reference)
+  const { container } = getFormElements(reference)
 
   if (!container) return
 
   const { tablesContainer, tablesMulti } = getFormTables(container)
-
-  $refs.container = container
-  $refs.tableButtons = tableButtons
-  $refs.tablesContainer = tablesContainer
-  $refs.tablesMulti = tablesMulti
 
   tablesContainer.forEach(startContainer)
 
@@ -77,7 +62,6 @@ function createElements (td) {
   elements.forEach(element => createFieldMember(element, td))
 
   removeEmptyElements(td)
-  // createColumn(td)
 }
 
 function createFieldMember (element, cell) {
